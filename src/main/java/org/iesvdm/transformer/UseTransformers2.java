@@ -17,6 +17,9 @@ public class UseTransformers2
         Transformer<String> hello = new HelloAdder();
         ArrayList<String> b=Transformers.applyConst(hello,a);
         System.out.println("Adding \"hello\" to the words gives: "+b);
+        Transformers.applyDest(hello, a);
+        System.out.println("prueba: ");
+        System.out.println(a);
     }
 
 }
