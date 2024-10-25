@@ -33,4 +33,16 @@ public class Joiners
 
     }
 
+    public static <T> T fold(ArrayList<T> list, Joiner<T> joiner) {
+        if (list.isEmpty()) {
+            return null; // O puedes devolver un valor por defecto si es necesario
+        }
+
+        T result = list.get(0);
+        for (int i = 1; i < list.size(); i++) {
+            result = joiner.join(result, list.get(i));
+        }
+        return result;
+    }
+
 }

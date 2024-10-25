@@ -8,7 +8,7 @@ class Multiplier implements Transformer<Integer>
     {
         mult = m;
     }
-
+    @Override
     public Integer transform(Integer n)
     {
         return n*mult;
