@@ -58,24 +58,24 @@ public class UseJoiners1
     }
 
     public static ArrayList<Integer> parseIntArrayList(String str) {
-        // Eliminar espacios en blanco iniciales y finales de la cadena
+        // Remove leading and trailing whitespace from string
         String line = str.trim();
 
-        // Eliminar los corchetes iniciales y finales
+        // Remove leading and trailing brackets
         String contents = line.substring(1, line.length() - 1).trim();
 
-        // Crear un ArrayList vacío
+        // Create an empty ArrayList
         ArrayList<Integer> list = new ArrayList<>();
 
-        // Si el contenido está vacío, devolver la lista vacía
+        // If content is empty, return empty list
         if (contents.length() == 0) {
             return list;
         }
 
-        // Dividir la cadena por comas para obtener los números
+        // Split the string by commas to get the numbers
         String[] nums = contents.split(",");
 
-        // Añadir los números al ArrayList
+        // Add the numbers to the ArrayList
         for (String num : nums) {
             list.add(Integer.parseInt(num.trim()));
         }

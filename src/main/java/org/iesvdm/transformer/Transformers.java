@@ -24,14 +24,14 @@ public class Transformers
 
     public static <T> LispList<T> transformList(Transformer<T> tran, LispList<T> a){
 
-        // condición de salida de la recursividad
+        // recursion exit condition
         if (a.isEmpty()) {
             return LispList.empty();
         }
-        // transforma el primer elemento de la lista
+        // transform the first element of the list
         T transformedHead = tran.transform(a.head());
 
-        // Aplicamos recursividad para transformar el resto de la lista (tail)
+        // We apply recursion to transform the rest of the list (tail)
         LispList<T> transformedTail = transformList(tran, a.tail());
 
         return transformedTail.cons(transformedHead);

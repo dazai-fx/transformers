@@ -20,7 +20,7 @@ public class Joiners
     public static <T> ArrayList<T> zipArrayLists(Joiner<T> joiner, ArrayList<T> list1, ArrayList<T> list2) {
 
         if (list1.size() != list2.size()) {
-            throw new IllegalArgumentException("Las listas deben tener el mismo tamaño");
+            throw new IllegalArgumentException("Lists must be the same size");
         }
 
         ArrayList<T> result = new ArrayList<>();
@@ -35,7 +35,7 @@ public class Joiners
 
     public static <T> T fold(ArrayList<T> list, Joiner<T> joiner) {
         if (list.isEmpty()) {
-            return null; // O puedes devolver un valor por defecto si es necesario
+            return null;
         }
 
         T result = list.get(0);
